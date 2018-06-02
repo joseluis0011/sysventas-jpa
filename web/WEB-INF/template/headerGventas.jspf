@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container"> 
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                <a target="_blank" href="#" class="navbar-brand"><img src="img/ep.png" alt="" width="27" height="27"></a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#" id="m0" class="active"><i class="fas fa-id-card" style="margin-right: 7px;color: #00ccff;" ></i>Reportes</a></li> 
+                    <li><a href="#" id="m1"><i class="fas fa-users" style="margin-right: 7px;color: #00ccff;" ></i>Perfil</a></li>  
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-user-cog fa-lg" style="color: blue;"></i> 
+                            <i class="fas fa-angle-double-right fa-lg" style="color: blue;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="navbar-login">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="text-center" >
+                                                <i class="fas fa-user-tie fa-7x"></i>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="text-left"><strong>${sessionScope.nombres}</strong></p>
+                                            <p class="text-left small">${sessionScope.rol}</p>
+                                            <p class="text-left">
+                                         <a href="#" class="btn btn-primary btn-block btn-sm" id="updateDatos">Actualizar Datos</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="navbar-login navbar-login-session">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p>
+                                                <a href="salir" class="btn btn-danger btn-block">Cerrar Sesion</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-top: 80px;" id="contenido">
+
+    <!-- Modal -->
+ 
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Actualizar Datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <button type="hidden" id="updid" class="form-control" style="display: none">${sessionScope.idp}</button>
+                        <label>Nombres :</label>
+                        <input type="text" id="updnom" class="form-control">
+                        <label>Apellidos :</label>
+                        <input type="text" id="updape" class="form-control">
+                        <label>Clave :</label>
+                        <input type="text" id="updcla" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="updateUser">Actualizar Usuario</button>
+                </div>
+            </div>
+        </div>
+    </div>
